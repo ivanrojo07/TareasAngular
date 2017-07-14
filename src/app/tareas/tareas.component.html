@@ -1,0 +1,7 @@
+<input type="text" [(ngModel)]="item_a_guardar">
+<button (click)="guardarItem()">Añadir Tarea</button>
+<ul class="list-unstyled">
+	<li *ngFor="let tarea of tareas">
+		<app-tarea-individual [tareaInfo]="tarea" (cambioTarea)="actualizar()"></app-tarea-individual>
+	</li>
+</ul>

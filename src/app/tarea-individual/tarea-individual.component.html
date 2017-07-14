@@ -1,0 +1,16 @@
+<div *ngIf="mostrarDatos">
+{{tareaInfo.texto}}
+<span class="herramientas">
+	<span class="item editar">
+		<button (click)="activarEdicion()">editar</button>
+	</span>
+	<span class="item borrar">
+		<button (click)="borrarRegistro(tareaInfo._id)"> Borrar</button>
+	</span>
+</span>
+</div>
+<div *ngIf="mostrarDatos == false">
+	<input type="text" [(ngModel)]="tareaModel">
+<button (click)="editarTarea(tareaInfo._id)">Modificar Tarea</button>
+</div>
+	
